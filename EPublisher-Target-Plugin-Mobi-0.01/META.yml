@@ -16,4 +16,4 @@ requires:
   EBook::MOBI: 0.3
   EPublisher: 0.5
   File::Temp: 0.22
-version: 0.1
+version: 0.01
