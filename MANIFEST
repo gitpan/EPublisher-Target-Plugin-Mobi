@@ -1,16 +1,4 @@
 Changes
-EPublisher-Target-Plugin-Mobi-0.01.tar.gz
-EPublisher-Target-Plugin-Mobi-0.01/Changes
-EPublisher-Target-Plugin-Mobi-0.01/LICENSE
-EPublisher-Target-Plugin-Mobi-0.01/MANIFEST
-EPublisher-Target-Plugin-Mobi-0.01/META.yml
-EPublisher-Target-Plugin-Mobi-0.01/Makefile.PL
-EPublisher-Target-Plugin-Mobi-0.01/dist.ini
-EPublisher-Target-Plugin-Mobi-0.01/lib/EPublisher/Target/Plugin/Mobi.pm
-EPublisher-Target-Plugin-Mobi-0.01/t/20_mobi.t
-EPublisher-Target-Plugin-Mobi-0.01/t/95_pm_have_version.t
-EPublisher-Target-Plugin-Mobi-0.01/t/96_pod_coverage.t
-EPublisher-Target-Plugin-Mobi-0.01/t/97_pod.t
 LICENSE
 MANIFEST
 META.yml

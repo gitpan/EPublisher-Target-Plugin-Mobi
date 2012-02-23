@@ -11,7 +11,7 @@ use EPublisher::Target::Base;
 
 our @ISA = qw(EPublisher::Target::Base);
 
-our $VERSION = 0.1;
+our $VERSION = 0.2;
 
 sub deploy {
     my ($self) = @_;
@@ -22,9 +22,8 @@ sub deploy {
     my $title          = $self->_config->{title}    || 'Pod Document';
     my $language       = $self->_config->{lang}     || 'en';
     my $out_filename   = $self->_config->{output}   || '';
-    my $cover_filename = $self->_config->{cover}    || '';
     my $encoding       = $self->_config->{encoding} || 'utf-8';
-    my $imgcover       = $self->_config->{imgcover} || '';
+    my $imgcover       = $self->_config->{cover}    || '';
     my $htmcover       = $self->_config->{htmcover} || '';
 
     if ( !$out_filename ) {
@@ -71,7 +70,8 @@ sub deploy {
     $book->make();
 
     # let me see how this mobi-html looks like
-    $book->print_mhtml();
+    #$book->print_mhtml();
+    # TODO: should only print in DEBUG-MODE
 
     # ok, give me that mobi-book as a file!
     $book->save();
@@ -84,7 +84,8 @@ sub deploy {
 
 
 __END__
-=pod
+
+=encoding utf-8
 
 =head1 NAME
 
@@ -113,19 +114,25 @@ creates the output.
       #...
     target:
       type: Mobi
+      author: Boris Daeppen
+      title: My eBook
+      encoding: utf-8
+      cover: /path/to/image/for/cover.jpg
+      htmcover: <h1>My own Titlepage</h1><p>Cool, isn't it?<p>
       output: /path/to/test.mobi
 
 =head1 COPYRIGHT & LICENSE
 
-Copyright 2012 Renee Baecker and Boris Däppen, all rights reserved.
+Boris Däppen, all rights reserved.
 
 This program is free software; you can redistribute it and/or modify it
 under the same terms of Artistic License 2.0.
 
 =head1 AUTHOR
 
-Renee Baecker (E<lt>module@renee-baecker.deE<gt>)
 Boris Däppen (E<lt>boris_daeppen@bluewin.chE<gt>)
+
+Some code is taken from Renee Baeckers module L<EPublisher::Target::Plugin::EPub>
 
 =cut
 
