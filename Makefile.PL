@@ -24,7 +24,7 @@ my %WriteMakefileArgs = (
     "EPublisher" => "0.5",
     "File::Temp" => "0.22"
   },
-  "VERSION" => "0.2",
+  "VERSION" => "0.3",
   "test" => {
     "TESTS" => "t/*.t"
   }
