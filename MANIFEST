@@ -7,7 +7,7 @@ README
 dist.ini
 lib/EPublisher/Target/Plugin/Mobi.pm
 t/20_mobi.t
-t/95_pm_have_version.t
-t/96_pod_coverage.t
-t/97_pod.t
+xt/95_pm_have_version.t
+xt/96_pod_coverage.t
+xt/97_pod.t
 xt/changes.t
